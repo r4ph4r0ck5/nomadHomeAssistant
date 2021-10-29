@@ -25,7 +25,7 @@ job "HA" {
     count = 1
 
     network {
-        mode = "bridge"
+        mode = "host"
         port "http"{
         static = 8123
         }
@@ -60,6 +60,7 @@ job "HA" {
         image = "ghcr.io/home-assistant/home-assistant:stable"
         ports = ["http"]
         privileged = true
+        network_mode = "host"
       }
 
       # It is possible to set environment variables which will be
