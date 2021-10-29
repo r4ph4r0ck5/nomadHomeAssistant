@@ -54,10 +54,11 @@ job "HA" {
       # Specify the driver to be "docker". Nomad supports
       # multiple drivers.
       driver = "docker"
-      ports = ["http"]
+      
       # Configuration is specific to each driver.
       config {
         image = "ghcr.io/home-assistant/home-assistant:stable"
+        ports = ["http"]
       }
 
       # It is possible to set environment variables which will be
