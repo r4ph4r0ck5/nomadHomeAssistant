@@ -59,6 +59,7 @@ job "HA" {
       config {
         image = "ghcr.io/home-assistant/home-assistant:stable"
         ports = ["http"]
+        privileged = true
       }
 
       # It is possible to set environment variables which will be
