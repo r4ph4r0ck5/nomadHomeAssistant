@@ -63,7 +63,7 @@ job "HA" {
       # It is possible to set environment variables which will be
       # available to the task when it runs.
       env {
-        TZ=America/Sao_Paulo
+        TZ="America/Sao_Paulo"
       }
 
       # Specify the maximum resources required to run the task,
