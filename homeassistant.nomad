@@ -25,7 +25,7 @@ job "HA" {
     count = 1
 
     network {
-        mode = "host"
+        mode = "bridge"
         port "http"{
         static = 8123
         }
