@@ -27,7 +27,7 @@ job "HA" {
     network {
         mode = "host"
         port "http"{
-        static = 8123
+        to = 8123
         }
 
     }
