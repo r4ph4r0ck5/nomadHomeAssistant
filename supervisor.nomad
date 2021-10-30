@@ -64,6 +64,8 @@ job "HASupervisor" {
       }
       env {
         TZ="America/Sao_Paulo"
+        SUPERVISOR_SHARE="/data"
+        SUPERVISOR_NAME="hassio_supervisor"
       }
       resources {
         cpu    = 2000 # MHz
