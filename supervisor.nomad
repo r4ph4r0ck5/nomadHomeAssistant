@@ -61,6 +61,7 @@ job "HASupervisor" {
       }
       config {
         image = "homeassistant/i386-hassio-supervisor"
+        privileged = true
       }
       env {
         TZ="America/Sao_Paulo"
