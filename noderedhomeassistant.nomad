@@ -29,6 +29,7 @@ job "NODERED" {
         image = "192.168.15.69:5000/nodered"
         ports = ["http"]
         network_mode = "host"
+        privileged = true
       }
       env {
         TZ="America/Sao_Paulo"
