@@ -26,7 +26,7 @@ job "NODERED" {
         read_only   = false
       }
       config {
-        image = "nodered:local"
+        image = "192.168.15.69:5000/nodered"
         ports = ["http"]
         network_mode = "host"
       }
