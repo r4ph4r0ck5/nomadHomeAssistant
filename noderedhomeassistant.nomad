@@ -21,12 +21,12 @@ job "NODERED" {
     task "nodered" {
       driver = "docker"
       volume_mount {
-        volume      = "nodered:local"
+        volume      = "nodered"
         destination = "/data"
         read_only   = false
       }
       config {
-        image = "nodered"
+        image = "nodered:local"
         ports = ["http"]
         network_mode = "host"
       }
