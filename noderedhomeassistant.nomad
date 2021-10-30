@@ -18,10 +18,10 @@ job "NODERED" {
       read_only = false
       source    = "nodered"
     }
-    task "supervisor" {
+    task "nodered" {
       driver = "docker"
       volume_mount {
-        volume      = "nodered"
+        volume      = "nodered:local"
         destination = "/data"
         read_only   = false
       }
