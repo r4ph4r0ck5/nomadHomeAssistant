@@ -13,17 +13,17 @@ job "NODERED" {
         static = 1880
         }
     }
-    volume "nodered" {
-      type      = "host"
-      read_only = false
-      source    = "nodered"
-    }
+    #volume "nodered" {
+     # type      = "host"
+    #  read_only = false
+    #  source    = "nodered"
+    #}
     task "nodered" {
       driver = "docker"
-      volume_mount {
-        volume      = "nodered"
-        destination = "/data"
-        read_only   = false
+      #volume_mount {
+     #   volume      = "nodered"
+     #   destination = "/data"
+     #   read_only   = false
       }
       config {
         image = "192.168.15.69:5000/nodered"
