@@ -1,4 +1,4 @@
-job "HA" { 
+job "HACore" { 
   datacenters = ["casa"]
   type = "service"
   update {
