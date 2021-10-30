@@ -24,7 +24,7 @@ job "NODERED" {
      #   volume      = "nodered"
      #   destination = "/data"
      #   read_only   = false
-      }
+      #}
       config {
         image = "192.168.15.69:5000/nodered"
         ports = ["http"]
