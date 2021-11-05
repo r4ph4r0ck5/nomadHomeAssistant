@@ -30,6 +30,7 @@ job "HACore" {
         ports = ["http"]
         privileged = true
         network_mode = "host"
+        force_pull = "true"
       }
       env {
         TZ="America/Sao_Paulo"
