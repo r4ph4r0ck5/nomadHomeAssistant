@@ -20,23 +20,16 @@ job "NODERED" {
     }
     task "nodered" {
       driver = "docker"
-      #user = "1000:1000"
-      #volume_mount {
-      #  volume      = "nodered"
-      #  destination = "/data"
-      #  read_only   = false
-      #}
+      volume_mount {
+        volume      = "nodered"
+        destination = "/data"
+        read_only   = false
+      }
       config {
         image = "192.168.15.69:5000/nodered"
         ports = ["http"]
         network_mode = "host"
         privileged = true
-        mount {
-          type = "volume"
-          target = "/data"
-          source = "nodered"
-          readonly = false
-      }
       }      
       env {
         TZ="America/Sao_Paulo"
