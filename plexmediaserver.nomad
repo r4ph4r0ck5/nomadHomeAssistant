@@ -12,11 +12,11 @@ job "PLEX" {
       read_only = false
       source    = "plexconfig"
     }
-    #volume "plexmovies" {
-    #  type      = "host"
-    #  read_only = false
-    #  source    = "plexmovies"
-    #}
+    volume "plexmovies" {
+      type      = "host"
+      read_only = false
+      source    = "plexmovies"
+    }
     network {
         mode = "host"
         }
@@ -28,11 +28,11 @@ job "PLEX" {
         destination = "/config"
         read_only   = false
       }
-      #volume_mount {
-      #  volume      = "plexmovies"
-      #  destination = "/movies"
-      #  read_only   = false
-      #}
+      volume_mount {
+        volume      = "plexmovies"
+        destination = "/movies"
+        read_only   = false
+      }
       config {
         image = "lscr.io/linuxserver/plex"
         privileged = true
