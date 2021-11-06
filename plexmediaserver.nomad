@@ -20,7 +20,7 @@ job "PLEX" {
     network {
         mode = "host"
         }
-    }
+    
     task "plexserver" {
       driver = "docker"
       volume_mount {
@@ -46,3 +46,4 @@ job "PLEX" {
       }
     }
   }
+}
