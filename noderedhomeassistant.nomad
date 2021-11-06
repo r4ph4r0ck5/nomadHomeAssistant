@@ -20,6 +20,7 @@ job "NODERED" {
     }
     task "nodered" {
       driver = "docker"
+      user = "UID=1000"
       volume_mount {
         volume      = "nodered"
         destination = "/data"
