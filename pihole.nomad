@@ -41,7 +41,7 @@ job "PIHOLE" {
       config {
         image = "pihole/pihole:latest"
         privileged = true
-        ports = ["http"," DNS"]
+        ports = ["http","DNS"]
         network_mode = "host"
       }
       env {
