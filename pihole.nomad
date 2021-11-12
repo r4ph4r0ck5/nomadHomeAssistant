@@ -19,6 +19,12 @@ job "PIHOLE" {
     }
     network {
         mode = "host"
+        port "http"{
+        static = 80
+        }
+        port "DNS"{
+        static = 53
+        }
     }
     task "piholecore" {
       driver = "docker"
@@ -35,6 +41,7 @@ job "PIHOLE" {
       config {
         image = "pihole/pihole:latest"
         privileged = true
+        ports = ["http"," DNS"]
         network_mode = "host"
       }
       env {
